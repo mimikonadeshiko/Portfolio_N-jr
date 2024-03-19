@@ -1,1 +1,95 @@
-a
+<!-- collection.html -->
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1><a href="http://takeru-sawai.com">ここにアイコン</a></h1>
+		<nav class="gnav">
+			<ul class="menu">
+				<li><a href="">うどん(人物)とは</a></li>
+				<li><a href="">作品集</a></li>
+				<li><a href="">お知らせ</a></li>
+				<li><a href="">お問い合わせ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="card" onclick="showDetails('project1')">
+			<h2>プロジェクトNβ</h2>
+			<p>X-Culture Redesign<br>～多文化共生を実現する場所～</p>
+			<img class="card_img" src="img/X-Culture.png" alt="ダミーの画像 dummy image">
+		</div>
+		<div class="card" onclick="showDetails('project2')">
+			<h2>プロジェクト2</h2>
+			<p>プロジェクト2の概要</p>
+			<img class="card_img" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+		</div>
+		<div class="card" onclick="showDetails('project3')">
+			<h2>プロジェクト3</h2>
+			<p>プロジェクト3の概要</p>
+			<img class="card_img" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+		</div>
+		<div class="card" onclick="showDetails('project4')">
+			<h2>プロジェクト4</h2>
+			<p>プロジェクト4の概要</p>
+			<img class="card_img" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+		</div>
+		<div class="card" onclick="showDetails('project5')">
+			<h2>プロジェクト5</h2>
+			<p>プロジェクト5の概要</p>
+			<img class="card_img" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+		</div>
+		<div class="card" onclick="showDetails('project6')">
+			<h2>プロジェクト6</h2>
+			<p>プロジェクト6の概要</p>
+			<img class="card_img" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+		</div>
+		<div class="card" onclick="showDetails('project7')">
+			<h2>プロジェクト7</h2>
+			<p>プロジェクト7の概要</p>
+			<img class="card_img" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+		</div>
+		<div class="card" onclick="showDetails('project8')">
+			<h2>プロジェクト8</h2>
+			<p>プロジェクト8の概要</p>
+			<img class="card_img" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+		</div>
+	</div>
+	
+
+	<div id="project1Details" class="details">
+		<h2>2023年度 3Q プロジェクトNβ</h2>
+		<p>10/16-12/22 チームEとして<b>Blender</b>で成果物を作成, 発表をしました</p>
+		<img class="img_nc" src="img/X-Culture.png" alt="ダミーの画像 dummy image">
+		<img class="img_nc" src="img/X-Culture_blender.png" alt="ダミーの画像 dummy image">
+	</div>
+
+	<div id="project2Details" class="details">
+		<h2>プロジェクト2の詳細</h2>
+		<p>プロジェクト2の詳細情報がここに表示されます。</p>
+		<img class="img_nc" src="img/dummy_960x592.png" alt="ダミーの画像 dummy image">
+	</div>
+
+<script>
+    function showDetails(projectId) {
+        var details = document.getElementById(projectId + 'Details');
+        var allDetails = document.querySelectorAll('.details');
+        
+        if (details.style.display === "none" || details.style.display === "") {
+            for (var i = 0; i < allDetails.length; i++) {
+                allDetails[i].style.display = "none";
+            }
+            details.style.display = "block";
+        } else {
+            details.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
